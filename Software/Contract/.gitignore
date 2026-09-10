@@ -1,0 +1,15 @@
+node_modules
+.env
+
+# Hardhat
+artifacts
+cache
+typechain-types
+
+# Coverage
+coverage
+coverage.json
+
+# macOS / iCloud
+.DS_Store
+.icloud
