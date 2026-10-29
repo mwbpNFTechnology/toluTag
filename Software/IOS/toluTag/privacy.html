@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>toluTag — Privacy Policy</title>
+<meta name="description" content="Privacy Policy for the toluTag iOS app by mwbp.io.">
+<style>
+  :root{
+    --ink:#0A0B0E; --ink2:#14161C; --ink3:#1A1D25;
+    --line:#252932; --line2:#2F3440;
+    --text:#E8E9EC; --mute:#9CA0AA; --dim:#6A6E78;
+    --lime:#C6F24E; --violet:#A78BFA;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ink); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter Tight",Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:56px 22px 96px}
+  .mono{font-family:ui-monospace,SFMono-Regular,"SF Mono","JetBrains Mono",Menlo,monospace}
+
+  header{border-bottom:1px solid var(--line); padding-bottom:26px; margin-bottom:34px}
+  .brand{display:flex; align-items:center; justify-content:space-between; gap:12px}
+  .wordmark{font-family:"Inter Tight",-apple-system,sans-serif; font-weight:700; font-size:22px; letter-spacing:-.02em}
+  .wordmark .dot{color:var(--lime)}
+  .pill{font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--lime);
+        border:1px solid var(--line2); border-radius:999px; padding:5px 11px}
+  h1{font-family:"Inter Tight",-apple-system,sans-serif; font-weight:700; letter-spacing:-.02em;
+     font-size:34px; line-height:1.1; margin:26px 0 10px}
+  .kicker{font-size:11px; letter-spacing:.2em; text-transform:uppercase; color:var(--violet); margin:0}
+  .meta{color:var(--dim); font-size:13.5px; margin-top:8px}
+  .meta b{color:var(--mute); font-weight:600}
+
+  h2{font-family:"Inter Tight",-apple-system,sans-serif; font-weight:650; font-size:19px;
+     letter-spacing:-.01em; margin:40px 0 12px; padding-top:8px}
+  p{margin:0 0 14px; color:var(--text)}
+  p.lead{color:var(--mute)}
+  a{color:var(--lime); text-decoration:none; border-bottom:1px solid rgba(198,242,78,.35)}
+  a:hover{border-bottom-color:var(--lime)}
+  strong{color:var(--text); font-weight:650}
+
+  ul{margin:0 0 14px; padding-left:0; list-style:none}
+  li{position:relative; padding-left:22px; margin:9px 0; color:var(--mute)}
+  li::before{content:""; position:absolute; left:2px; top:.72em; width:6px; height:6px;
+             border-radius:2px; background:var(--lime)}
+  li strong{color:var(--text)}
+
+  .callout{background:var(--ink3); border:1px solid var(--line); border-radius:14px;
+           padding:18px 20px; margin:20px 0}
+  .callout p{margin:0; color:var(--text)}
+
+  .contact{background:var(--ink2); border:1px solid var(--line); border-radius:14px;
+           padding:20px; margin-top:14px}
+  .contact .label{font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); margin:0 0 6px}
+  .contact .name{font-weight:650; font-size:16px}
+
+  footer{margin-top:56px; padding-top:22px; border-top:1px solid var(--line);
+          color:var(--dim); font-size:12.5px; text-align:center; letter-spacing:.02em}
+
+  @media (max-width:520px){
+    .wrap{padding:40px 18px 72px}
+    h1{font-size:28px}
+    body{font-size:15.5px}
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="wordmark">tolutag<span class="dot">.</span></div>
+        <div class="pill">Privacy</div>
+      </div>
+    </header>
+
+    <main>
+      <p class="kicker">Privacy Policy</p>
+      <h1>Your data stays on your device.</h1>
+      <p class="meta"><b>Effective date:</b> [1 September 2026] &nbsp;·&nbsp; <b>Developer:</b> mwbp.io</p>
+
+      <h2>Overview</h2>
+      <p class="lead">toluTag is a utility for interacting with toluTag NFC hardware (NXP SE05x secure
+        elements). It lets you create keys, sign messages, and read and write data on your own tags over NFC.</p>
+      <div class="callout">
+        <p>toluTag is private by default. <strong>The app has no servers, no user accounts, and does not
+        transmit your data anywhere.</strong> Everything the app does happens locally on your iPhone and on
+        the tag you tap.</p>
+      </div>
+
+      <h2>Information we collect</h2>
+      <p><strong>We do not collect any personal information.</strong> We (mwbp.io) have no back-end, no
+        analytics, no advertising, and no third-party tracking SDKs. We never see, receive, or store any data
+        from your use of the app.</p>
+
+      <h2>Information stored on your device</h2>
+      <p>To provide its features, toluTag stores the following <strong>only on your device</strong>, in the
+        iOS Keychain (encrypted at rest by iOS):</p>
+      <ul>
+        <li><strong>Tag records</strong> you choose to save — labels, object identifiers, public keys,
+          Ethereum addresses, saved text, card unique identifiers, card names, and collected-tag lists.</li>
+        <li><strong>PINs</strong> you enter for PIN-protected keys, if you choose to save a record that uses one.</li>
+      </ul>
+      <p>This information:</p>
+      <ul>
+        <li>never leaves your device except when <strong>you</strong> explicitly export or share it (for
+          example, using the iOS share sheet to save a collection as a JSON file, or copying a value to your clipboard);</li>
+        <li>is protected behind <strong>Face ID / Touch ID / device passcode</strong> before your saved
+          records can be viewed;</li>
+        <li>is removed when you delete the record in the app or delete the app from your device.</li>
+      </ul>
+
+      <h2>Device permissions we use</h2>
+      <ul>
+        <li><strong>NFC (Near Field Communication)</strong> — used to read from and write to toluTag hardware
+          when you initiate a scan. NFC is only active while you are performing an action in the app.</li>
+        <li><strong>Face ID / biometrics</strong> — used locally to unlock your saved tag records. Biometric
+          data is handled entirely by iOS and Apple's Secure Enclave; the app never accesses or stores it.</li>
+      </ul>
+      <p>The app does not request access to your location, contacts, photos, microphone, or camera, and does
+        not use background activity.</p>
+
+      <h2>Blockchain and cryptographic data</h2>
+      <p>toluTag can derive Ethereum addresses and produce cryptographic signatures locally using keys held on
+        your tag's secure element. These operations are performed on your device and on the tag. The app does
+        not broadcast transactions, connect to any blockchain network, or send signatures anywhere — any
+        resulting data (such as a signature or exported list) is yours to use or share as you choose.</p>
+
+      <h2>Sharing and disclosure</h2>
+      <p>We do not sell, rent, or share your information, because we do not collect or receive any. Data leaves
+        your device only through actions you take yourself (exporting a file, sharing, or copying), and only to
+        the destination you select.</p>
+
+      <h2>Children's privacy</h2>
+      <p>toluTag is not directed to children and does not knowingly collect information from anyone, including
+        children under 13.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. Changes will be reflected by the "Effective date"
+        above and, where appropriate, in an updated version of the app.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this Privacy Policy, contact us:</p>
+      <div class="contact">
+        <p class="label">Contact</p>
+        <div class="name">mwbp.io</div>
+        <p style="margin:6px 0 0; color:var(--mute)">[support email, e.g. liordorenboust@gmail.com]</p>
+      </div>
+    </main>
+
+    <footer>
+      developed by mwbp.io — connecting blockchain to the world
+    </footer>
+  </div>
+</body>
+</html>

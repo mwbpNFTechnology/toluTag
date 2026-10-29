@@ -247,7 +247,9 @@ device.
 - *Collect tags*, a two-stage batch flow: configure an object id, phrase format
   and label, then tap tags one after another. Each tag's address and unique id
   are read, duplicates rejected, and the whole set saved as an exportable
-  record.
+  record. With `address_tagId_count` you choose the first count (0 by
+  default). *Continue a list* picks a saved collection and adds tags to it:
+  counts carry on after its highest one, and tags already in it are rejected.
 
 **Keys**, records of created keys and stored strings, persisted in the Keychain
 and gated behind Face ID.
