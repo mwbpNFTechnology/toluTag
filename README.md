@@ -132,6 +132,17 @@ PIN. Using such a key requires opening an authenticated session
 `ProcessSessionCmd`. Both clients handle this transparently once a session is
 open.
 
+Instead of a PIN, the iOS app can bind a key to an **ECKey authentication
+object**: the public half of a P-256 key held in the iPhone's Secure Enclave.
+Using the key then needs an ECKey session, which the phone opens by signing a
+one-time key with its Secure Enclave key after Face ID or the passcode. Every
+command and answer in that session is encrypted and MAC-protected (SCP03), so
+there is no PIN to type or guess, and a recording of the radio traffic shows
+only ciphertext. The phone's private key never leaves the Secure Enclave, so
+only that iPhone can use the tag's key. *Create key* and *Scan tag* support it;
+the other app flows and the Java CLI use PINs. The full protocol is described in
+[toluWallet](https://github.com/mwbpNFTechnology/toluWallet#how-the-eckey-session-works).
+
 ### Signing
 
 The chip signs a 32-byte digest with `ECDSA_SHA256` and returns a DER
@@ -228,8 +239,8 @@ device.
 **Write**
 
 - *Create key*, provision the secp256k1 curve and generate a key pair at a
-  chosen object id, optionally PIN-protected (creating or reusing a UserID
-  object) and optionally deletable.
+  chosen object id, optionally protected by a PIN (creating or reusing a UserID
+  object) or by this iPhone's ECKey, and optionally deletable.
 - *Write text*, store an arbitrary string in a binary file object on the tag.
 - *Delete*, remove an object, pre-fillable from a saved record (carrying its
   PIN/UserID so the session can authorise the delete).
@@ -354,6 +365,9 @@ what goes into one tag.
   development tags.
 - **PIN attempts** on a UserID object are limited by the applet; exhausting them
   can lock the protected object permanently.
+- **ECKey keys belong to one iPhone.** The phone's key cannot be backed up or
+  moved, so if it is lost (phone reset or replaced), keys bound to it can no
+  longer be used.
 - `tags.json` in the repo is sample output, not configuration.
 
 ## Status
